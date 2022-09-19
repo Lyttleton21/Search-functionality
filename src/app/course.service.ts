@@ -41,7 +41,7 @@ export class CourseService {
     {
       id:5,
       text:'we are going to teach you react form basic to intermedite',
-      image:'../assets/reacct_inter.png',
+      image:'../assets/react_inter.png',
       type:"not free",
       price:100,
       title:'react form basic to intermedite'
@@ -58,7 +58,7 @@ export class CourseService {
       id:7,
       text:'we are going to teach you react basic',
       image:'../assets/react for new.png',
-      type:" notfree",
+      type:" not free",
       price:35,
       title:'react basic'
     },
@@ -72,11 +72,11 @@ export class CourseService {
     }, 
     {
       id:9,
-      text:'we are going to teach you angular basic',
-      image:'../assets/Angular.png',
+      text:'we are going to teach you javascript basic',
+      image:'../assets/js_ben.png',
       type:"free",
       price:0,
-      title:'angular for beginner'
+      title:'javascript basic for beginner'
     }
   ]
 

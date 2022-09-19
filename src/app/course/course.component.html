@@ -6,11 +6,11 @@
                     <img [src]="c.image" class="card-img-top" height="200px">
                 </div>
                 <div class="card-body text-center">
-                    <h5 class="card-title ">{{c.title}}</h5>
+                    <h5 class="card-title ">{{c.title |titlecase}}</h5>
                     <p class="card-title ">{{c.text}}</p>
                     <div class="row align-items-center">
-                        <div class="col"><h6 class="">{{c.type}}</h6></div>
-                        <div class="col"><p><b>Price:{{c.price}}</b></p></div>
+                        <div class="col"><h6 class="">{{c.type | titlecase}}</h6></div>
+                        <div class="col"><p><b>Price:{{c.price | currency}}</b></p></div>
                     </div>
                     <div class="row">
                         <div class="col"><button class="btn btn-success" style="width: 100%;">Buy</button></div>
