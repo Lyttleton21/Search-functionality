@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CourseService } from 'src/app/course.service';
 import { Course } from 'src/app/model/course';
 
@@ -16,7 +17,14 @@ export class FilterComponent implements OnInit {
  @Input() free!:number;
  @Input() not_free!:number;
 
+ selectedButtonValue: string = 'All-Courses'; 
 
+ @Output() filterButtonSelectionChange: EventEmitter<string> = new EventEmitter<string>();
+ 
+onButtonSelectionChange(){
+  this.filterButtonSelectionChange.emit(this.selectedButtonValue)
+  //console.log(this.selectedButtonValue);
+}
   constructor(public courseSirvice:CourseService) { }
 
   ngOnInit(): void {
@@ -25,3 +33,7 @@ export class FilterComponent implements OnInit {
   
 
 }
+function output() {
+  throw new Error('Function not implemented.');
+}
+

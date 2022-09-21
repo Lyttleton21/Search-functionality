@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { CourseComponent } from './course/course.component';
 import { SearchComponent } from './course/search/search.component';
 import { FilterComponent } from './course/filter/filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FilterComponent } from './course/filter/filter.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

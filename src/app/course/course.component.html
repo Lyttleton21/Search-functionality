@@ -1,30 +1,35 @@
 
 <div class="container">
     <app-search></app-search>
-    <app-filter [all]="allCourses" [free]="allFreeCourses" [not_free]="notfreeCourses"></app-filter>
+    <app-filter [all]="allCourses" 
+    [free]="allFreeCourses" 
+    [not_free]="notfreeCourses"
+    (filterButtonSelectionChange)="onfilterbuttonChange($event)"></app-filter>
 </div>
 
 <div class="container p-3 ">
    <div class="row justify-content-center">
-        <div class="col-md-4 col-sm-6 col-lg-3"  *ngFor="let c of everyCouses">
-            <div class="card m-2" >
-                <div class="card-header">
-                    <img [src]="c.image" class="card-img-top" height="200px">
-                </div>
-                <div class="card-body text-center">
-                    <h5 class="card-title ">{{c.title |titlecase}}</h5>
-                    <p class="card-title ">{{c.text}}</p>
-                    <div class="row align-items-center">
-                        <div class="col"><h6 class="">{{c.type | titlecase}}</h6></div>
-                        <div class="col"><p><b>Price:{{c.price | currency}}</b></p></div>
+        <ng-container *ngFor="let c of everyCouses">
+            <div class="col-md-4 col-sm-6 col-lg-3" *ngIf="courseChange === 'All-Courses' || courseChange === c.type">
+                <div class="card m-2" >
+                    <div class="card-header">
+                        <img [src]="c.image" class="card-img-top" height="200px">
                     </div>
-                    <div class="row">
-                        <div class="col"><button class="btn btn-success" style="width: 100%;">Buy</button></div>
-                        <div class="col"><button class="btn btn-secondary" style="width: 100%;">details</button></div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title ">{{c.title |titlecase}}</h5>
+                        <p class="card-title ">{{c.text}}</p>
+                        <div class="row align-items-center">
+                            <div class="col"><h6 class="">{{c.type | titlecase}}</h6></div>
+                            <div class="col"><p><b>Price:{{c.price | currency}}</b></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><button class="btn btn-success" style="width: 100%;">Buy</button></div>
+                            <div class="col"><button class="btn btn-secondary" style="width: 100%;">details</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </ng-container>
    </div>
 </div>
 

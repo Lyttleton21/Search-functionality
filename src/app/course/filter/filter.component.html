@@ -17,7 +17,9 @@
             <div class="col-2 text-end"><b>Filter:</b></div>
             <div class="col">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Courses" id="All-Courses" checked>
+                    <input class="form-check-input" type="radio" name="Courses"
+                     id="All-Courses" [(ngModel)]="selectedButtonValue" 
+                     value="All-Courses" (change)="onButtonSelectionChange()">
                     <label class="form-check-label" for="All-Courses">
                         All-Courses({{this.all}})
                     </label>
@@ -25,7 +27,9 @@
             </div>
             <div class="col">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Courses" id="Free-Courses" >
+                    <input class="form-check-input" type="radio" name="Courses" 
+                    id="Free-Courses" [(ngModel)]="selectedButtonValue" 
+                    value="free" (change)="onButtonSelectionChange()">
                     <label class="form-check-label" for="Free-Courses">
                         Free-Courses({{this.free}})
                     </label>
@@ -33,9 +37,11 @@
             </div>
             <div class="col">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Courses" id="Not-Free-Courses">
-                    <label class="form-check-label" for="Not-Free-Courses">
-                        Not-Free-Courses({{this.not_free}})
+                    <input class="form-check-input" type="radio" name="Courses"
+                     id="premium" [(ngModel)]="selectedButtonValue"
+                      value="premium" (change)="onButtonSelectionChange()">
+                    <label class="form-check-label" for="premium">
+                        Premium({{this.not_free}})
                     </label>
                 </div>
             </div>

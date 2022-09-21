@@ -19,5 +19,12 @@ export class CourseComponent implements OnInit {
 
   allCourses:number = this.coursesService.allCourses.length;
   allFreeCourses:number = this.coursesService.allCourses.filter((course) => course.type === "free").length;
-  notfreeCourses:number = this.coursesService.allCourses.filter(course => course.type ==='premium').length
+  notfreeCourses:number = this.coursesService.allCourses.filter(course => course.type ==='premium').length;
+
+  //@output()
+  courseChange:string = 'All-Courses';
+  onfilterbuttonChange(data:string){
+    this.courseChange = data;
+    //console.log(this.courseChange);
+  }
 }
