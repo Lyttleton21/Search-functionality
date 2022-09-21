@@ -22,7 +22,7 @@ export class FilterComponent implements OnInit {
  @Output() filterButtonSelectionChange: EventEmitter<string> = new EventEmitter<string>();
  
 onButtonSelectionChange(){
-  this.filterButtonSelectionChange.emit(this.selectedButtonValue)
+  this.filterButtonSelectionChange.emit(this.selectedButtonValue);
   //console.log(this.selectedButtonValue);
 }
   constructor(public courseSirvice:CourseService) { }
