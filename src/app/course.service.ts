@@ -36,7 +36,7 @@ export class CourseService {
       image:'../assets/js fo advance.png',
       type:"premium",
       price:350,
-      title:'javascript from basic to advance'
+      title:'javascript for advance'
     },
     {
       id:5,
@@ -44,7 +44,7 @@ export class CourseService {
       image:'../assets/react_inter.png',
       type:"premium",
       price:100,
-      title:'react form basic to intermedite'
+      title:'react for intermedite'
     },
     {
       id:6,
@@ -76,7 +76,7 @@ export class CourseService {
       image:'../assets/js_ben.png',
       type:"free",
       price:0,
-      title:'javascript basic for beginner'
+      title:'javascript basic'
     }
   ]
 
