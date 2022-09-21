@@ -27,4 +27,11 @@ export class CourseComponent implements OnInit {
     this.courseChange = data;
     //console.log(this.courseChange);
   }
+
+  //@output()
+  searchText:string = '';
+  onSearchTextEnter(data:string){
+    this.searchText = data;
+    console.log(this.searchText);
+  }
 }

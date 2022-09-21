@@ -5,7 +5,9 @@
 
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" name="search"
+            placeholder="Search" [(ngModel)]="enterSearchValue"
+            (input)="searchTextValueChange()">
         </div>
     </form>
 </div>
